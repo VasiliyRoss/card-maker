@@ -1,6 +1,6 @@
 import {
     TextBlock,
-    ImageBlock, 
+    ImageBlock,
     ArtBlock,
     Filter,
     Canvas,
@@ -18,7 +18,7 @@ const filledText: TextBlock = {
     fontSize: 18,
     fontFamily: 'Arial',
     fontColor: 'green',
-    decoration: []
+    decoration: [],
 };
 
 const filledImageBlock: ImageBlock = {

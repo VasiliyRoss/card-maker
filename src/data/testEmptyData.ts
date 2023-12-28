@@ -1,6 +1,6 @@
 import {
     TextBlock,
-    ImageBlock, 
+    ImageBlock,
     ArtBlock,
     Filter,
     Canvas,
@@ -18,7 +18,7 @@ const emptyText: TextBlock = {
     fontSize: 18,
     fontFamily: 'Arial',
     fontColor: 'green',
-    decoration: []
+    decoration: [],
 };
 
 const emptyImageBlock: ImageBlock = {
@@ -59,4 +59,4 @@ const emptyCard: CardData = {
     filter: emptyFilter,
 };
 
-export {emptyCanvas};
+export { emptyCanvas };
