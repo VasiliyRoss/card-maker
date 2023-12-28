@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# Card Maker
+**О проекте**
+Card Maker - приложении позволяющее создавать открытки, с возможностью сохранения итоговой открытки в формате PNG или JPEG.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Все действия в редакторе записываются в историю команд. Комбинация команды Ctrl-Z откатывает последнюю операцию, комбинация Ctrl-Y применяет, последнюю отмененную операцию.
 
-## Available Scripts
+![Alt text](diagramm.png)
 
-In the project directory, you can run:
+**Холст**
+По умолчанию в редакторе показывается холст белого цвета размером 800x600.
 
-### `yarn start`
+Должна быть возможность создания нового холста. При создании нового холста текущий холс удаляется, перед удалением пользователю должно показаться предупреждающее окно, в котором пользователь подтверждает удаление текущего холста.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+На один холст можно добавлять несколько картинок.
+Должна быть возможность изменения размера холста
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Инструменты:**
+- Выделение области
+- Перемещение выделенной области
+- Обрезание по выделенной области
+- Удаление выбранной области (удаленная область становится прозрачной)
+- Вставка текста
+    - Должна быть возможность выбрать размер текста
+    - Должна быть возможность выбрать цвет текста
+    - Должна быть возможность переместить текст
+    - Должна быть возможность изменить текст
+- Может быть вставка арт объектов
+    - Должна быть возможность переместить арт объекты
+    - Должны быть возможность изменять размер арт объектов
+- Вставка картинки
+    - Должна быть возможность переместить картинку
+    - Должна быть возможность изменять размер картинок
 
-### `yarn test`
+**Фильтры**
+Доступные фильтры:
+- Серый фильтр
+- Фильтр красного
+- Фильтр синего
+- Фильтр зеленого
+- *Могут быть и другие фильтры*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Импорт фотографий**
+Фотографии можно импортировать из следующих источников:
+- компьютер
+- сервис бесплатных картинок Pixels
+Если импортируемая фотография больше по размеру холста, то должно показаться окно, в котором пользователь может: 
+- увеличить полотно до размера фотографии
+- сохранить размер полотна, при этом вставится только часть фотографии
+- отменить вставку фотографии
 
-### `yarn build`
+Поддерживаемые форматы: JPEG и PNG
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Шаблоны открыток**
+Должна быть коллекция шаблонов открыток. При выборе шаблона, он применяется в текущем холсте.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Экспорт фотографий**
+Фотографии можно экспортировать в форматах: JPEG и PNG
