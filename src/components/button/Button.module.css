@@ -1,0 +1,14 @@
+.button {
+    width: 96px;
+    height: 33px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background: #3F5264;
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
