@@ -12,11 +12,14 @@ function alarm() {
 
 function Toolbar() {
     return (
-        <div className={styles.toolbar}>
-            <Button text="Layout" image={layoutsImg} onClick={alarm} />
-            <Button text="Arts" image={artsImg} onClick={alarm} />
-            <Button text="Text" image={textImg} onClick={alarm} />
-            <Button text="Images" image={imagesImg} onClick={alarm} />
+        <div className={styles.toolbarWrapper}>
+            <div className={styles.toolbar}>
+                <Button text="Layout" image={layoutsImg} onClick={alarm} />
+                <Button text="Arts" image={artsImg} onClick={alarm} />
+                <Button text="Text" image={textImg} onClick={alarm} />
+                <Button text="Images" image={imagesImg} onClick={alarm} />
+            </div>
+            <div className={styles.actionBar}></div>
         </div>
     );
 }

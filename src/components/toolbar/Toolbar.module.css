@@ -1,4 +1,15 @@
+.toolbarWrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
 .toolbar {
     width: 50px;
     background: #2B3140;
+}
+
+.actionBar {
+    width: 250px;
+    background-color: #fff;
 }
