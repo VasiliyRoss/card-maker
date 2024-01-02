@@ -1,0 +1,17 @@
+.button {
+    margin-top: 25px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonImage {
+    width: 20px;
+}
+
+.buttonText {
+    margin-top: 5px;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 12px;
+}
