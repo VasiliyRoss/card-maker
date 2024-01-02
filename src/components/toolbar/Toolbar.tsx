@@ -19,7 +19,12 @@ function Toolbar() {
                 <Button text="Text" image={textImg} onClick={alarm} />
                 <Button text="Images" image={imagesImg} onClick={alarm} />
             </div>
-            <div className={styles.actionBar}></div>
+            <div className={styles.actionBar}>
+                <button className={styles.exampleButton}>rectangle</button>
+                <button className={styles.exampleButton}>circle</button>
+                <button className={styles.exampleButton}>triangle</button>
+                <button className={styles.exampleButton}>Text</button>
+            </div>
         </div>
     );
 }

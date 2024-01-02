@@ -3,7 +3,7 @@ import {
     ImageBlock,
     ArtBlock,
     Filter,
-    Canvas,
+    CanvasType,
     CardData,
 } from '../types/content';
 
@@ -19,6 +19,7 @@ const emptyText: TextBlock = {
     fontFamily: 'Arial',
     fontColor: 'green',
     decoration: [],
+    align: [],
 };
 
 const emptyImageBlock: ImageBlock = {
@@ -48,9 +49,9 @@ const emptyFilter: Filter = {
     a: 0,
 };
 
-const emptyCanvas: Canvas = {
-    height: 300,
-    width: 900,
+const emptyCanvas: CanvasType = {
+    height: '300px',
+    width: '900px',
 };
 
 const emptyCard: CardData = {

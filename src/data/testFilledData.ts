@@ -3,7 +3,7 @@ import {
     ImageBlock,
     ArtBlock,
     Filter,
-    Canvas,
+    CanvasType,
     CardData,
 } from '../types/content';
 
@@ -19,6 +19,7 @@ const filledText: TextBlock = {
     fontFamily: 'Arial',
     fontColor: 'green',
     decoration: [],
+    align: ['center'],
 };
 
 const filledImageBlock: ImageBlock = {
@@ -48,9 +49,9 @@ const enabledFilter: Filter = {
     a: 0.5,
 };
 
-const filledCanvas: Canvas = {
-    height: 900,
-    width: 600,
+const filledCanvas: CanvasType = {
+    height: '900px',
+    width: '600px',
 };
 
 const filledEditor: CardData = {

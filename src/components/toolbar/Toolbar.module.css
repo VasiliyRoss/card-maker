@@ -12,4 +12,12 @@
 .actionBar {
     width: 250px;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.exampleButton {
+    color: #fff;
+    background-color: blue;
+    margin-top: 15px;
 }

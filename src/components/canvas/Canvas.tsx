@@ -1,12 +1,8 @@
 import React from 'react';
 import styles from './Canvas.module.css';
+import { CanvasType } from '../../types/content';
 
-type CanvasProps = {
-    width?: string;
-    height?: string;
-};
-
-function Canvas({ width, height }: CanvasProps) {
+function Canvas({ width, height }: CanvasType) {
     return <div style={{ width, height }} className={styles.canvas}></div>;
 }
 

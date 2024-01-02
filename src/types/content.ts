@@ -24,9 +24,12 @@ type TextBlock = Block & {
     fontFamily: string;
     fontColor: string;
     decoration: TextDecoration[];
+    align: TextAlign[];
 };
 
 type TextDecoration = 'bold' | 'italic' | 'underline';
+
+type TextAlign = 'left' | 'center' | 'right';
 
 // graphic types
 
@@ -47,15 +50,15 @@ type Filter = {
 
 //Canvas
 
-type Canvas = {
-    height: number;
-    width: number;
+type CanvasType = {
+    height: string;
+    width: string;
 };
 
 type CardData = {
     objects: Array<TextBlock | ImageBlock | ArtBlock>;
-    canvas: Canvas;
+    canvas: CanvasType;
     filter: Filter;
 };
 
-export type { TextBlock, ImageBlock, ArtBlock, Filter, Canvas, CardData };
+export type { TextBlock, ImageBlock, ArtBlock, Filter, CanvasType, CardData };
