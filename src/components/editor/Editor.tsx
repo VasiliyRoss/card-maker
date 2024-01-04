@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './Editor.module.css';
-import Toolbar from '../toolbar/Toolbar';
-import Canvas from '../canvas/Canvas';
+import Toolbar from '../Toolbar/Toolbar';
+import Card from '../Card/Card';
+import { filledCanvas } from '../../data/testFilledData';
 
 function Editor() {
     return (
         <div className={styles.background}>
             <Toolbar />
-            <Canvas width="800px" height="600px" />
+            <Card canvas={filledCanvas} />
         </div>
     );
 }

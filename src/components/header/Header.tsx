@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.module.css';
-import Button from '../button/Button';
+import Button from '../Button/Button';
 
 function Header() {
     return (

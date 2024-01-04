@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Toolbar.module.css';
-import Button from './button/Button';
+import Button from './ToolbarButton/ToolbarButton';
 import layoutsImg from './img/layouts.svg';
 import artsImg from './img/artobjects.svg';
 import textImg from './img/text.svg';

@@ -50,7 +50,7 @@ const enabledFilter: Filter = {
 };
 
 const filledCanvas: CanvasType = {
-    height: '900px',
+    height: '800px',
     width: '600px',
 };
 
@@ -59,3 +59,5 @@ const filledEditor: CardData = {
     canvas: filledCanvas,
     filter: enabledFilter,
 };
+
+export { filledCanvas };

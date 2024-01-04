@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from 'react';
-import styles from './Button.module.css';
+import styles from './ToolbarButton.module.css';
 
 type ButtonProps = {
     text: string;

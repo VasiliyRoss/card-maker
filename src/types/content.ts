@@ -56,9 +56,9 @@ type CanvasType = {
 };
 
 type CardData = {
-    objects: Array<TextBlock | ImageBlock | ArtBlock>;
+    objects?: Array<TextBlock | ImageBlock | ArtBlock>;
     canvas: CanvasType;
-    filter: Filter;
+    filter?: Filter;
 };
 
 export type { TextBlock, ImageBlock, ArtBlock, Filter, CanvasType, CardData };
