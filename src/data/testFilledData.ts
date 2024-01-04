@@ -1,7 +1,7 @@
 import {
     TextBlock,
     ImageBlock,
-    ArtBlock,
+    ArtBlockType,
     Filter,
     CanvasType,
     CardData,
@@ -32,14 +32,14 @@ const filledImageBlock: ImageBlock = {
     src: '../public/index.html',
 };
 
-const filledArtBlock: ArtBlock = {
-    id: 'ArtBlock1',
+const filledArtBlockType: ArtBlockType = {
+    id: 'ArtBlockType1',
     posX: 200,
     posY: 200,
     isSelected: true,
     height: 200,
     width: 300,
-    src: 'qwd',
+    form: 'triangle',
 };
 
 const enabledFilter: Filter = {
@@ -55,9 +55,9 @@ const filledCanvas: CanvasType = {
 };
 
 const filledEditor: CardData = {
-    objects: [filledArtBlock, filledImageBlock, filledText],
+    objects: [filledArtBlockType, filledImageBlock, filledText],
     canvas: filledCanvas,
     filter: enabledFilter,
 };
 
-export { filledCanvas };
+export { filledCanvas, filledArtBlockType };

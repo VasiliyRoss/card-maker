@@ -1,7 +1,7 @@
 import {
     TextBlock,
     ImageBlock,
-    ArtBlock,
+    ArtBlockType,
     Filter,
     CanvasType,
     CardData,
@@ -32,14 +32,14 @@ const emptyImageBlock: ImageBlock = {
     src: '',
 };
 
-const emptyGraphicObject: ArtBlock = {
-    id: 'ArtBlock1',
+const emptyGraphicObject: ArtBlockType = {
+    id: 'ArtBlockType1',
     posX: 200,
     posY: 200,
     isSelected: true,
     height: 200,
     width: 300,
-    src: '',
+    form: 'rectangle',
 };
 
 const emptyFilter: Filter = {

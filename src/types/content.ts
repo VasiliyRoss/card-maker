@@ -37,8 +37,8 @@ type ImageBlock = Block & {
     src: string;
 };
 
-type ArtBlock = Block & {
-    src: string;
+type ArtBlockType = Block & {
+    form: 'triangle' | 'ellipse' | 'rectangle';
 };
 
 type Filter = {
@@ -56,9 +56,16 @@ type CanvasType = {
 };
 
 type CardData = {
-    objects?: Array<TextBlock | ImageBlock | ArtBlock>;
+    objects?: Array<TextBlock | ImageBlock | ArtBlockType>;
     canvas: CanvasType;
     filter?: Filter;
 };
 
-export type { TextBlock, ImageBlock, ArtBlock, Filter, CanvasType, CardData };
+export type {
+    TextBlock,
+    ImageBlock,
+    ArtBlockType,
+    Filter,
+    CanvasType,
+    CardData,
+};
