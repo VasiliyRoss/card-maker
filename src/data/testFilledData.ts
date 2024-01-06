@@ -50,7 +50,7 @@ const enabledFilter: Filter = {
 };
 
 const filledCanvas: CanvasType = {
-    height: '800px',
+    height: '600px',
     width: '600px',
 };
 

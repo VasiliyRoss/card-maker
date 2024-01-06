@@ -10,7 +10,7 @@ type Size = {
     width: number;
 };
 
-type Block = Position &
+type BlockType = Position &
     Size & {
         id: string;
         isSelected: boolean;
@@ -18,7 +18,7 @@ type Block = Position &
 
 // text types
 
-type TextBlock = Block & {
+type TextBlock = BlockType & {
     value: string;
     fontSize: number;
     fontFamily: string;
@@ -33,11 +33,11 @@ type TextAlign = 'left' | 'center' | 'right';
 
 // graphic types
 
-type ImageBlock = Block & {
+type ImageBlock = BlockType & {
     src: string;
 };
 
-type ArtBlockType = Block & {
+type ArtBlockType = BlockType & {
     form: 'triangle' | 'ellipse' | 'rectangle';
 };
 
@@ -62,6 +62,7 @@ type CardData = {
 };
 
 export type {
+    BlockType,
     TextBlock,
     ImageBlock,
     ArtBlockType,
