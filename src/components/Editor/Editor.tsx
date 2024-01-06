@@ -10,7 +10,7 @@ function Editor() {
     return (
         <div className={styles.background}>
             <Toolbar />
-            <Card objects={cardObjects} canvas={filledCanvas} />
+            <Card canvas={filledCanvas} />
         </div>
     );
 }

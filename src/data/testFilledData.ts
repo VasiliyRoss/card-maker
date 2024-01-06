@@ -2,62 +2,75 @@ import {
     TextBlock,
     ImageBlock,
     ArtBlockType,
-    Filter,
     CanvasType,
     CardData,
+    Size,
+    Color,
+    BlockType,
 } from '../types/content';
 
 const filledText: TextBlock = {
-    id: '2',
-    height: 200,
-    width: 300,
-    posX: 200,
-    posY: 200,
-    isSelected: false,
     value: 'Hellow',
     fontSize: 18,
     fontFamily: 'Arial',
     fontColor: 'green',
     decoration: [],
-    align: ['center'],
+    align: 'center',
 };
 
 const filledImageBlock: ImageBlock = {
-    id: 'imageBlock1',
-    posX: 200,
-    posY: 200,
-    isSelected: true,
-    height: 200,
-    width: 300,
+    type: 'link',
     src: '../public/index.html',
 };
 
+const artBlockBackground: Color = {
+    color: 'black',
+};
+
+const artBlockBorder: Color = {
+    color: 'red',
+};
+
 const filledArtBlockType: ArtBlockType = {
-    id: 'ArtBlockType1',
-    posX: 200,
-    posY: 200,
-    isSelected: true,
-    height: 200,
-    width: 300,
     form: 'triangle',
+    background: artBlockBackground,
+    border: artBlockBorder,
 };
 
-const enabledFilter: Filter = {
-    r: 253,
-    g: 150,
-    b: 51,
-    a: 0.5,
-};
-
-const filledCanvas: CanvasType = {
+const canvasSize: Size = {
     height: '600px',
     width: '600px',
 };
 
+const canvasBackground: Color = {
+    color: 'yellow',
+};
+
+const blockWithArtSize: Size = {
+    width: '100px',
+    height: '100px',
+};
+
+const blockWithArt: BlockType = {
+    id: '1',
+    isSelected: true,
+    size: blockWithArtSize,
+    object: filledArtBlockType,
+};
+
+const filledCanvas: CanvasType = {
+    size: canvasSize,
+    objects: [blockWithArt],
+    background: canvasBackground,
+};
+
+const filter: Color = {
+    color: 'red',
+};
+
 const filledEditor: CardData = {
-    objects: [filledArtBlockType, filledImageBlock, filledText],
     canvas: filledCanvas,
-    filter: enabledFilter,
+    filter: filter,
 };
 
 export { filledCanvas, filledArtBlockType };

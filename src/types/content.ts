@@ -1,30 +1,31 @@
 // common types
 
 type Position = {
-    posX: number;
-    posY: number;
+    posX: string;
+    posY: string;
 };
 
 type Size = {
-    height: number;
-    width: number;
+    height: string;
+    width: string;
 };
 
-type BlockType = Position &
-    Size & {
-        id: string;
-        isSelected: boolean;
-    };
+type BlockType = {
+    id: string;
+    isSelected: boolean;
+    size: Size;
+    object: TextBlock | ImageBlock | ArtBlockType;
+};
 
 // text types
 
-type TextBlock = BlockType & {
+type TextBlock = {
     value: string;
     fontSize: number;
     fontFamily: string;
     fontColor: string;
     decoration: TextDecoration[];
-    align: TextAlign[];
+    align: TextAlign;
 };
 
 type TextDecoration = 'bold' | 'italic' | 'underline';
@@ -33,32 +34,32 @@ type TextAlign = 'left' | 'center' | 'right';
 
 // graphic types
 
-type ImageBlock = BlockType & {
+type ImageBlock = {
+    type: 'link' | 'base64';
     src: string;
 };
 
-type ArtBlockType = BlockType & {
+type ArtBlockType = {
     form: 'triangle' | 'ellipse' | 'rectangle';
+    background?: Color;
+    border: Color;
 };
 
-type Filter = {
-    r: number;
-    g: number;
-    b: number;
-    a: number;
+type Color = {
+    color: string;
 };
 
 //Canvas
 
 type CanvasType = {
-    height: string;
-    width: string;
+    size: Size;
+    objects?: Array<BlockType>;
+    background?: ImageBlock | Color;
 };
 
 type CardData = {
-    objects?: Array<TextBlock | ImageBlock | ArtBlockType>;
     canvas: CanvasType;
-    filter?: Filter;
+    filter?: Color;
 };
 
 export type {
@@ -66,7 +67,8 @@ export type {
     TextBlock,
     ImageBlock,
     ArtBlockType,
-    Filter,
     CanvasType,
     CardData,
+    Size,
+    Color,
 };
