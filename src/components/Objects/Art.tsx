@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArtBlockType } from '../../types/content';
-import styles from './Art.module.css';
 
 type SizeParams = {
     width: number;

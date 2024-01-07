@@ -4,6 +4,7 @@
     "rules": {
         "order/order": ["custom-properties", "declarations"],
         "order/properties-order": ["width", "height"],
+        "selector-class-pattern": null,
         "prettier/prettier": true
     }
 }

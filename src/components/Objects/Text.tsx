@@ -1,6 +1,5 @@
 import React from 'react';
 import { TextBlock } from '../../types/content';
-import styles from './SlideText.module.css';
 
 function Text(props: TextBlock) {
     const textStyle = {

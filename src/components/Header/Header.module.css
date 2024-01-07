@@ -1,11 +1,10 @@
 .header {
     height: 50px;
-    background-color: #2B3140;
+    background-color: #2b3140;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .navigation {
@@ -16,16 +15,15 @@
 }
 
 .backwardButton {
-    height: 20px;
     width: 20px;
+    height: 20px;
     background-image: url('./img/back.svg');
     cursor: pointer;
 }
 
 .forwardButton {
-    height: 20px;
     width: 20px;
+    height: 20px;
     background-image: url('./img/forward.svg');
     cursor: pointer;
 }
-
