@@ -1,6 +1,6 @@
 import { CardData } from '../types/content';
 
-function saveModelToLocal(model: CardData) {
+function saveCardToJSON(model: CardData) {
     const text = JSON.stringify(model);
     const name = 'file.json';
     const type = 'text/plain';
@@ -15,7 +15,7 @@ function saveModelToLocal(model: CardData) {
     console.log('Project has been saved');
 }
 
-function loadModelFromLocal(onLoad: (model: CardData) => void) {
+function loadCardFromJSON(onLoad: (model: CardData) => void) {
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = '.json';
@@ -39,4 +39,4 @@ function loadModelFromLocal(onLoad: (model: CardData) => void) {
     console.log('Project has been loaded');
 }
 
-export { saveModelToLocal, loadModelFromLocal };
+export { saveCardToJSON, loadCardFromJSON };

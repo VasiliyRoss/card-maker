@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css';
 import Button from '../Button/Button';
-import { saveModelToLocal } from '../../utils/fileUtils';
+import { saveCardToJSON } from '../../utils/fileUtils';
 import { filledCard } from '../../data/testFilledData';
 
 function Header() {
@@ -15,7 +15,7 @@ function Header() {
                 <Button text="Download Card" />
                 <Button
                     text="Save"
-                    onClick={() => saveModelToLocal(filledCard)}
+                    onClick={() => saveCardToJSON(filledCard)}
                 />
                 <Button text="Import" />
             </div>
