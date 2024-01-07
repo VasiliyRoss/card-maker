@@ -5,6 +5,7 @@ import layoutsImg from './img/layouts.svg';
 import artsImg from './img/artobjects.svg';
 import textImg from './img/text.svg';
 import imagesImg from './img/images.svg';
+import { PropertiesPanel } from '../PropertiesPanel/PropertiesPanel';
 
 function alarm() {
     console.log('Hello!');
@@ -25,6 +26,7 @@ function Toolbar() {
                 <button className={styles.exampleButton}>triangle</button>
                 <button className={styles.exampleButton}>Text</button>
             </div>
+            <PropertiesPanel />
         </div>
     );
 }
