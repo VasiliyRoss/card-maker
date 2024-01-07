@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Canvas.module.css';
-import { CanvasType, BlockType } from '../../types/content';
-import { filledArtBlockType } from '../../data/testFilledData';
+import { CanvasType } from '../../types/content';
 import Block from '../Block/Block';
 
 function Canvas(props: CanvasType) {

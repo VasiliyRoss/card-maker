@@ -99,4 +99,23 @@ const filledCard: CardData = {
     filter: filterCard,
 };
 
-export { filledCanvas, filledArtBlockType, filledCard };
+const defaultCanvasSize: Size = {
+    height: 600,
+    width: 800,
+};
+
+const defaultCanvasBackground: Color = {
+    color: '#fff',
+};
+
+const emptyCanvas: CanvasType = {
+    size: defaultCanvasSize,
+    objects: [],
+    background: defaultCanvasBackground,
+};
+
+const emptyData: CardData = {
+    canvas: emptyCanvas,
+};
+
+export { filledCard, emptyData };
