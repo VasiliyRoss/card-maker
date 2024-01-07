@@ -55,7 +55,7 @@ type Color = {
 
 type CanvasType = {
     size: Size;
-    objects: Array<BlockType>;
+    objects?: Array<BlockType>;
     background?: Color;
 };
 

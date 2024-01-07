@@ -1,5 +1,6 @@
-.background {
+.editor {
     height: 100%;
+    position: relative;
     background-color: #f0f0f0;
     display: flex;
     flex-direction: row;

@@ -3,28 +3,17 @@ import styles from './Canvas.module.css';
 import { CanvasType } from '../../types/content';
 import Block from '../Block/Block';
 
-function Canvas(props: CanvasType) {
-    const canvasSize = {
-        height: props.size.height,
-        width: props.size.width,
-    };
-
-    const canvasBackground = {
-        background: props.background?.color,
-    };
-
+function Canvas({ size, objects, background }: CanvasType) {
     return (
         <div
             className={styles.canvas}
             style={{
-                height: canvasSize.height + 'px',
-                width: canvasSize.width + 'px',
-                backgroundColor: canvasBackground.background,
+                height: size.height + 'px',
+                width: size.width + 'px',
+                backgroundColor: background?.color,
             }}
         >
-            {props.objects?.map((object, index) => (
-                <Block key={index} {...object} />
-            ))}
+            {objects?.map((object, index) => <Block key={index} {...object} />)}
         </div>
     );
 }

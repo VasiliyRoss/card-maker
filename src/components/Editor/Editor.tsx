@@ -2,13 +2,13 @@ import React from 'react';
 import styles from './Editor.module.css';
 import Toolbar from '../Toolbar/Toolbar';
 import Card from '../Card/Card';
-import { filledCard, emptyData } from '../../data/testFilledData';
+import { emptyData } from '../../data/testFilledData';
 
 function Editor() {
     return (
-        <div className={styles.background}>
+        <div className={styles.editor}>
             <Toolbar />
-            <Card {...filledCard} />
+            <Card canvas={emptyData.canvas} filter={emptyData.filter} />
         </div>
     );
 }

@@ -10,16 +10,23 @@ import Text from '../Objects/Text';
 import Image from '../Objects/Image';
 import styles from './Block.module.css';
 
-function Block(props: BlockType) {
-    const blockSize = props.size;
+function Block({
+    id,
+    position,
+    isSelected,
+    size,
+    objectType,
+    object,
+}: BlockType) {
+    const blockSize = size;
     const blockPosition = {
-        top: props.position.posY,
-        left: props.position.posX,
+        top: position.posY,
+        left: position.posX,
     };
 
-    switch (props.objectType) {
+    switch (objectType) {
         case 'art': {
-            const artElement = props.object as ArtBlockType;
+            const artElement = object as ArtBlockType;
             return (
                 <div style={blockPosition} className={styles.block}>
                     <ArtBlock {...artElement} {...blockSize} />
@@ -27,7 +34,7 @@ function Block(props: BlockType) {
             );
         }
         case 'image': {
-            const imageElement = props.object as ImageBlock;
+            const imageElement = object as ImageBlock;
             return (
                 <div style={blockPosition} className={styles.block}>
                     <Image {...imageElement} />
@@ -35,7 +42,7 @@ function Block(props: BlockType) {
             );
         }
         case 'text': {
-            const textElement = props.object as TextBlock;
+            const textElement = object as TextBlock;
             return (
                 <div style={blockPosition} className={styles.block}>
                     <Text {...textElement} />
