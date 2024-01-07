@@ -15,13 +15,12 @@ const filledText: TextBlock = {
     fontSize: 18,
     fontFamily: 'Arial',
     fontColor: 'green',
-    decoration: [],
+    decoration: ['underline'],
     align: 'center',
 };
 
 const filledImageBlock: ImageBlock = {
-    type: 'link',
-    src: '../public/index.html',
+    src: 'https://www.w3schools.com/css/ocean.jpg',
 };
 
 const artBlockBackground: Color = {
@@ -76,9 +75,18 @@ const blockWithText: BlockType = {
     position: blockWithArtPosition,
 };
 
+const blockWithImage: BlockType = {
+    id: '1',
+    isSelected: true,
+    size: blockWithArtSize,
+    objectType: 'image',
+    object: filledImageBlock,
+    position: blockWithArtPosition,
+};
+
 const filledCanvas: CanvasType = {
     size: canvasSize,
-    objects: [blockWithArt, blockWithText],
+    objects: [blockWithArt, blockWithText, blockWithImage],
     background: canvasBackground,
 };
 

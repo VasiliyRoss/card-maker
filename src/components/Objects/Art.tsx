@@ -26,7 +26,7 @@ function ArtBlock(
     const centerY = height / 2;
 
     return (
-        <div className={styles.art}>
+        <div>
             <svg width={width} height={height}>
                 <g>
                     {form === 'ellipse' && (

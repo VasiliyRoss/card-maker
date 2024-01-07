@@ -1,27 +1,28 @@
 import React from 'react';
-import { ArtBlockType, BlockType } from '../../types/content';
+import {
+    ArtBlockType,
+    BlockType,
+    TextBlock,
+    ImageBlock,
+} from '../../types/content';
 import ArtBlock from '../Objects/Art';
+import Text from '../Objects/Text';
+import Image from '../Objects/Image';
 
 function Block(props: BlockType) {
+    const blockSize = props.size;
     switch (props.objectType) {
         case 'art': {
             const artElement = props.object as ArtBlockType;
-            const artSize = props.size;
-            return ArtBlock(artElement, artSize);
+            return ArtBlock(artElement, blockSize);
         }
         case 'image': {
-            return (
-                <div>
-                    <p>Hello image</p>
-                </div>
-            );
+            const imageElement = props.object as ImageBlock;
+            return <Image {...imageElement} />;
         }
         case 'text': {
-            return (
-                <div>
-                    <p>Hello text</p>
-                </div>
-            );
+            const textElement = props.object as TextBlock;
+            return Text(textElement);
         }
         default: {
             return null;

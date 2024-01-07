@@ -37,7 +37,6 @@ type TextAlign = 'left' | 'center' | 'right';
 // graphic types
 
 type ImageBlock = {
-    type: 'link' | 'base64';
     src: string;
 };
 

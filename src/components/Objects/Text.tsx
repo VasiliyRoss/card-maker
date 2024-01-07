@@ -1,18 +1,16 @@
-import { useRef, useEffect } from 'react';
+import React from 'react';
 import { TextBlock } from '../../types/content';
 import styles from './SlideText.module.css';
 
-type TextProps = {
-    data: TextBlock;
-};
-
-const Text = (props: TextProps) => {
-    const data = props.data;
+function Text(props: TextBlock) {
     const textStyle = {
-        textAlign: data.align,
-        fontSize: data.fontSize,
-        fontColor: data.fontColor,
-        fontFamily: data.fontFamily,
-        fontStyle: data.decoration,
+        textAlign: props.align,
+        fontSize: props.fontSize + 'px',
+        color: props.fontColor,
+        fontFamily: props.fontFamily,
+        textDecoration: props.decoration?.[0],
     };
-};
+    return <span style={textStyle}>{props.value}</span>;
+}
+
+export default Text;
