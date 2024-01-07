@@ -6,14 +6,16 @@ type Position = {
 };
 
 type Size = {
-    height: string;
-    width: string;
+    height: number;
+    width: number;
 };
 
 type BlockType = {
     id: string;
+    position: Position;
     isSelected: boolean;
     size: Size;
+    objectType: 'text' | 'image' | 'art';
     object: TextBlock | ImageBlock | ArtBlockType;
 };
 
@@ -43,6 +45,7 @@ type ArtBlockType = {
     form: 'triangle' | 'ellipse' | 'rectangle';
     background?: Color;
     border: Color;
+    borderRadius: string;
 };
 
 type Color = {
@@ -53,8 +56,8 @@ type Color = {
 
 type CanvasType = {
     size: Size;
-    objects?: Array<BlockType>;
-    background?: ImageBlock | Color;
+    objects: Array<BlockType>;
+    background?: Color;
 };
 
 type CardData = {
@@ -71,4 +74,5 @@ export type {
     CardData,
     Size,
     Color,
+    Position,
 };

@@ -15,7 +15,6 @@
     },
     "plugins": ["react", "@stylistic/js"],
     "rules": {
-        "indent": ["error", 4],
         "linebreak-style": ["error", "unix"],
         "quotes": ["error", "single"],
         "semi": ["error", "always"],
