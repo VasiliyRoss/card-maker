@@ -78,7 +78,7 @@ const blockWithText: BlockType = {
 
 const filledCanvas: CanvasType = {
     size: canvasSize,
-    objects: [blockWithArt],
+    objects: [blockWithArt, blockWithText],
     background: canvasBackground,
 };
 

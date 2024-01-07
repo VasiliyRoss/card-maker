@@ -22,7 +22,9 @@ function Canvas(props: CanvasType) {
                 backgroundColor: canvasBackground.background,
             }}
         >
-            <Block {...props.objects?.[0]} />
+            {props.objects?.map((object, index) => (
+                <Block key={index} {...object} />
+            ))}
         </div>
     );
 }
