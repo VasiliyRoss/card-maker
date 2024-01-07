@@ -7,61 +7,76 @@ type SizeParams = {
     height: number;
 };
 
-function getTriangleCoordinates(width: number, height: number): string {
-    const x1 = width / 2;
-    const y1 = 0;
-    const x2 = 0;
-    const y2 = height;
-    const x3 = width;
-    const y3 = height;
+function getTriangleCoordinates(
+    width: number,
+    height: number,
+    borderRadius: number,
+) {
+    const halfWidth = width / 2;
 
-    return `${x1},${y1} ${x2},${y2} ${x3},${y3}`;
+    const adjustedHeight = height - borderRadius;
+
+    return `0,${adjustedHeight} ${halfWidth},0 ${width},${adjustedHeight}`;
 }
 
-function ArtBlock(
-    { form, background, border, borderRadius }: ArtBlockType,
-    { width, height }: SizeParams,
-) {
+function ArtBlock({
+    form,
+    background,
+    border,
+    borderRadius,
+    width,
+    height,
+}: ArtBlockType & SizeParams) {
     const centerX = width / 2;
     const centerY = height / 2;
 
+    const borderCof = 3;
+
     return (
-        <div>
-            <svg width={width} height={height}>
-                <g>
-                    {form === 'ellipse' && (
-                        <ellipse
-                            cx={centerX}
-                            cy={centerY}
-                            rx={width / 2}
-                            ry={height / 2}
-                            fill={background?.color}
-                            strokeWidth={borderRadius}
-                            stroke={border.color}
-                        />
-                    )}
-                    {form === 'rectangle' && (
-                        <rect
-                            x={0}
-                            y={0}
-                            width={width}
-                            height={height}
-                            fill={background?.color}
-                            strokeWidth={borderRadius}
-                            stroke={border.color}
-                        />
-                    )}
-                    {form === 'triangle' && (
-                        <polygon
-                            points={getTriangleCoordinates(width, height)}
-                            fill={background?.color}
-                            strokeWidth={borderRadius}
-                            stroke={border.color}
-                        />
-                    )}
-                </g>
-            </svg>
-        </div>
+        <svg
+            width={width + borderCof * borderRadius}
+            height={height + borderCof * borderRadius}
+        >
+            <g transform={`translate(${borderRadius}, ${borderRadius})`}>
+                {form === 'ellipse' && (
+                    <ellipse
+                        cx={centerX + borderRadius}
+                        cy={centerY + borderRadius}
+                        rx={width / 2}
+                        ry={height / 2}
+                        fill={background?.color}
+                        strokeWidth={borderRadius}
+                        stroke={border.color}
+                    />
+                )}
+                {form === 'rectangle' && (
+                    <rect
+                        x={0}
+                        y={0}
+                        width={width}
+                        height={height}
+                        fill={background?.color}
+                        strokeWidth={borderRadius}
+                        stroke={border.color}
+                    />
+                )}
+                {form === 'triangle' && (
+                    <polygon
+                        points={getTriangleCoordinates(
+                            width,
+                            height,
+                            borderRadius,
+                        )}
+                        fill={background?.color}
+                        strokeWidth={borderRadius}
+                        stroke={border.color}
+                        transform={`translate(${borderRadius / 2}, ${
+                            borderRadius / 2
+                        })`}
+                    />
+                )}
+            </g>
+        </svg>
     );
 }
 

@@ -35,7 +35,7 @@ const filledArtBlockType: ArtBlockType = {
     form: 'rectangle',
     background: artBlockBackground,
     border: artBlockBorder,
-    borderRadius: '5',
+    borderRadius: 10,
 };
 
 const canvasSize: Size = {
@@ -86,7 +86,7 @@ const blockWithImage: BlockType = {
 
 const filledCanvas: CanvasType = {
     size: canvasSize,
-    objects: [blockWithArt, blockWithText, blockWithImage],
+    objects: [blockWithArt, blockWithText],
     background: canvasBackground,
 };
 

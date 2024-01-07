@@ -8,7 +8,7 @@ function Editor() {
     return (
         <div className={styles.background}>
             <Toolbar />
-            <Card {...emptyData} />
+            <Card {...filledCard} />
         </div>
     );
 }

@@ -44,7 +44,7 @@ type ArtBlockType = {
     form: 'triangle' | 'ellipse' | 'rectangle';
     background?: Color;
     border: Color;
-    borderRadius: string;
+    borderRadius: number;
 };
 
 type Color = {
