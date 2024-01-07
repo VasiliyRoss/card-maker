@@ -10,9 +10,8 @@ function getTriangleCoordinates(
     width: number,
     height: number,
     borderRadius: number,
-) {
+): string {
     const halfWidth = width / 2;
-
     const adjustedHeight = height - borderRadius;
 
     return `0,${adjustedHeight} ${halfWidth},0 ${width},${adjustedHeight}`;
