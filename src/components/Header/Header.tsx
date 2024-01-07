@@ -9,7 +9,10 @@ function Header() {
                 <div className={styles.backwardButton}></div>
                 <div className={styles.forwardButton}></div>
             </div>
-            <Button text="Download" />
+            <div>
+                <Button text="Download" />
+                <Button text="Import" />
+            </div>
         </header>
     );
 }

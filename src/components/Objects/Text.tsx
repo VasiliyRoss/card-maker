@@ -10,7 +10,7 @@ function Text(props: TextBlock) {
         fontFamily: props.fontFamily,
         textDecoration: props.decoration?.[0],
     };
-    return <span style={textStyle}>{props.value}</span>;
+    return <p style={textStyle}>{props.value}</p>;
 }
 
 export default Text;
