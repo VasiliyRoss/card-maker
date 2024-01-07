@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './Header.module.css';
 import Button from '../Button/Button';
-import { saveCardToJSON } from '../../utils/fileUtils';
-import { filledCard } from '../../data/testFilledData';
 
 function Header() {
     return (
@@ -11,14 +9,7 @@ function Header() {
                 <div className={styles.backwardButton}></div>
                 <div className={styles.forwardButton}></div>
             </div>
-            <div>
-                <Button text="Download Card" />
-                <Button
-                    text="Save"
-                    onClick={() => saveCardToJSON(filledCard)}
-                />
-                <Button text="Import" />
-            </div>
+            <Button text="Download Card" />
         </header>
     );
 }

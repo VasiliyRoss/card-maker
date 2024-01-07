@@ -1,8 +1,8 @@
 import React from 'react';
-import { Size, Position, ImageBlock } from '../../types/content';
+import { ImageBlock } from '../../types/content';
 
-function Image(props: ImageBlock) {
-    return <img src={props.src} />;
+function Image({ src }: ImageBlock) {
+    return <img src={src} />;
 }
 
 export default Image;

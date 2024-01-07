@@ -1,9 +1,7 @@
 .button {
-    margin-left: 30px;
-    width: 96px;
-    height: 33px;
+    padding: 10px 30px;
     flex-shrink: 0;
-    border-radius: 2px;
+    border-radius: 6px;
     background: #3f5264;
     color: #fff;
     text-align: center;

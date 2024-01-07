@@ -8,7 +8,6 @@ function Editor() {
     return (
         <div className={styles.editor}>
             <Toolbar />
-
             <Card canvas={emptyData.canvas} filter={emptyData.filter} />
         </div>
     );
