@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Canvas.module.css';
-import { CanvasType } from '../../types/content';
+import { CanvasType, Size } from '../../types/content';
 import Block from '../Block/Block';
 
 function Canvas({ size, objects, background }: CanvasType) {
